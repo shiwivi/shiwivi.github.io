@@ -4,7 +4,7 @@
 //  lose('send', 'pageview');
     
 //quality
-// 'use strict';
+ 'use strict';
 
 // Mobile promo section
 

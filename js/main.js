@@ -23,7 +23,7 @@ if(index==2)
 let oneSentence=sentence[Math.floor(Math.random()*(sentence.length))];
 $(".excerpt").text(oneSentence);
 //打字机
-let tips=["技术&生活&分享&回忆","使用PC端谷歌浏览器访问体验更佳","欢迎通过上一页的平台联系我","蓬门今始为君开"];
+let tips=["技术&生活&分享&回忆","使用PC端谷歌浏览器访问体验更佳","欢迎通过上一页的平台联系我"];
 //添加文本
 function setText(t){
     return new Promise((resolve,reject)=>{
@@ -70,7 +70,7 @@ $('.septum').textillate({in:{delay: 100}});
 
 });   
 // 倒计时
-    let end=new Date('2021-12-23 00:00:00').getTime();
+    let end=new Date('2021/12/23 00:00:00').getTime();
     function cutdown(){
         let now=new Date().getTime();
         let gap=end-now;
