@@ -38,7 +38,7 @@ html{
   }
   @media screen and (min-width: 870px) {
     html {
-      font-size: 22px;
+      font-size: 16px;
     }
   }
   @media screen and (min-width: 1100px) {
@@ -632,34 +632,34 @@ font-size:1.3rem;
         width: 80%;
     }
     .platform .icon li:nth-child(1) .iconfont{
-        box-shadow: 3px -3px 4px #4267B2,
-                    -3px 3px 4px #4267B2,
-                    3px 3px 4px #4267B2,
-                    -3px -3px 4px #4267B2; 
+        box-shadow: 2px -2px 2px #4267B2,
+                    -2px 2px 2px #4267B2,
+                    2px 2px 2px  #4267B2,
+                    -2px -2px 2px #4267B2; 
     }
     .platform .icon li:nth-child(2) .iconfont{
-        box-shadow: 3px -3px 4px  #1DA1F2,
-                    -3px 3px 4px  #1DA1F2,
-                     3px  3px 4px  #1DA1F2, 
-                    -3px -3px 4px #1DA1F2;       
+        box-shadow: 2px -2px 2px #1DA1F2,
+                    -2px 2px 2px #1DA1F2,
+                    2px 2px 2px   #1DA1F2, 
+                    -2px -2px 2px#1DA1F2;       
     }
     .platform .icon li:nth-child(3) .iconfont {
-        box-shadow: 3px -3px 4px  #FF0080,
-                    -3px 3px 4px  #FF0080,
-                     3px  3px 4px  #FF0080,
-                    -3px -3px 4px #FF0080;
+        box-shadow: 2px -2px 2px #FF0080,
+                    -2px 2px 2px #FF0080,
+                    2px 2px 2px   #FF0080,
+                    -2px -2px 2px#FF0080;
     }
     .platform .icon li:nth-child(4) .iconfont{
-        box-shadow: 3px -3px 4px  #ff0000,
-                    -3px 3px 4px  #ff0000,
-                     3px  3px 4px  #ff0000,
-                    -3px -3px 4px #ff0000;
+        box-shadow: 2px -2px 2px #ff0000,
+                    -2px 2px 2px #ff0000,
+                    2px 2px 2px   #ff0000,
+                    -2px -2px 2px#ff0000;
     }
     .platform .icon li:nth-child(5) .iconfont{
-        box-shadow: 3px -3px 4px  #2EFE2E,
-                    -3px 3px 4px  #2EFE2E,
-                    3px  3px 4px  #2EFE2E,
-                    -3px -3px 4px #2EFE2E;
+        box-shadow: 2px -2px 2px  #2EFE2E,
+                    -2px 2px 2px  #2EFE2E,
+                    2px 2px 2px   #2EFE2E,
+                    -2px -2px 2px #2EFE2E;
     }
     .cutdown .excerpt{
         font-size:4rem;

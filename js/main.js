@@ -23,43 +23,36 @@ if(index==2)
 let oneSentence=sentence[Math.floor(Math.random()*(sentence.length))];
 $(".excerpt").text(oneSentence);
 //打字机
-let tips=["技术&生活&分享&回忆","使用PC端谷歌浏览器访问体验更佳","欢迎通过上一页的平台联系我"];
-//添加文本
-function setText(t){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            $(".tag").text(t);
-            resolve();
-        },100)//打字速度
-    })
+let txt=["技术&生活&分享&回忆","使用PC端谷歌浏览器访问体验更佳","欢迎通过上一页的平台联系我"];
+let txtIndex=0;//数组下标
+let wordIndex=0;//每句话下标
+let flag=true;//判断写入/删除
+let pause=0;//暂停间隙
+setInterval(()=>{
+    if(pause==0){
+if(flag){
+    $(".tag").text(txt[txtIndex].substring(0,++wordIndex));
 }
-async function main(flag,word){
-    if(flag==1){  
-        //打印字符串  
-   for(let i=0;i<=word.length;i++){
-        await setText(word.substr(0,i)); 
-    } 
-    setTimeout(()=>{
-    main(!flag,word);
-},2000)//句子打印完成，停留2s后开始删除
-}else{
-    //删除字符串效果
-    for(let i=word.length;i>=0;i--){
-        await setText(word.substr(0,i));
-    }
-    setTimeout(()=>{
-    main(!flag,tips[++j]);
-  //字符串数组遍历完毕，重新开始遍历
-    if(j==(tips.length-1)){
-        j=-1;
-    }
-},2000)//开始下一组打印
+else{
+    $(".tag").text(txt[txtIndex].substring(0,wordIndex--));
 }
 }
-let j=0;
-main(1,tips[j]);
-//打字机结束
-
+else{
+    pause++;
+}
+if(wordIndex>=txt[txtIndex].length+10){//+10为文本输入完毕后的展示时长
+    flag=false;
+}
+else if(wordIndex<0){
+   txtIndex++;
+    wordIndex=0;
+    pause=-8;//越小暂停时间越长
+    flag=true;
+        if(txtIndex>=txt.length){
+            txtIndex=0;
+        }
+}
+},150)
 }
 }
 });
@@ -69,6 +62,7 @@ $('.tlt').textillate({initialDelay: 1000});
 $('.septum').textillate({in:{delay: 100}});
 
 });   
+
 // 倒计时
     let end=new Date('2021/12/23 00:00:00').getTime();
     function cutdown(){
