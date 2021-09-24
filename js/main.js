@@ -3,6 +3,18 @@
 //     $('.loader').hide(0);
 // })
 $(function(){
+    setInterval(function(){
+        $('.text').find("span").toggleClass('dance');
+    },1700)
+
+    $(window).on('load',function(){
+             $('.preload').hide(0);
+         })
+
+
+
+
+
 $('#fullpage').fullpage({
 anchors: ['firstPage', 'secondPage'],
 menu: '#Menu',
@@ -22,38 +34,9 @@ if(index==2)
     ]
 let oneSentence=sentence[Math.floor(Math.random()*(sentence.length))];
 $(".excerpt").text(oneSentence);
-//打字机
-let txt=["技术&生活&分享&回忆","使用PC端谷歌浏览器访问体验更佳","欢迎通过上一页的平台联系我"];
-let txtIndex=0;//数组下标
-let wordIndex=0;//每句话下标
-let flag=true;//判断写入/删除
-let pause=0;//暂停间隙
-setInterval(()=>{
-    if(pause==0){
-if(flag){
-    $(".tag").text(txt[txtIndex].substring(0,++wordIndex));
+
 }
-else{
-    $(".tag").text(txt[txtIndex].substring(0,wordIndex--));
-}
-}
-else{
-    pause++;
-}
-if(wordIndex>=txt[txtIndex].length+10){//+10为文本输入完毕后的展示时长
-    flag=false;
-}
-else if(wordIndex<0){
-   txtIndex++;
-    wordIndex=0;
-    pause=-8;//越小暂停时间越长
-    flag=true;
-        if(txtIndex>=txt.length){
-            txtIndex=0;
-        }
-}
-},150)
-}
+
 }
 });
 $.fn.fullpage.setAllowScrolling(false,'up');
@@ -96,3 +79,34 @@ $('.septum').textillate({in:{delay: 100}});
         }
     })
     
+    //打字机
+let txt=["技术&生活&分享&回忆","使用PC端谷歌浏览器访问体验更佳","欢迎通过上一页的平台联系我"];
+let txtIndex=0;//数组下标
+let wordIndex=0;//每句话下标
+let flag=true;//判断写入/删除
+let pause=0;//暂停间隙
+var typer=setInterval(()=>{
+    if(pause==0){
+if(flag){
+    $(".tag").text(txt[txtIndex].substring(0,++wordIndex));
+}
+else{
+    $(".tag").text(txt[txtIndex].substring(0,wordIndex--));
+}
+}
+else{
+    pause++;
+}
+if(wordIndex>=txt[txtIndex].length+10){//+10为文本输入完毕后的展示时长
+    flag=false;
+}
+else if(wordIndex<0){
+   txtIndex++;
+    wordIndex=0;
+    pause=-8;//越小暂停时间越长
+    flag=true;
+        if(txtIndex>=txt.length){
+            txtIndex=0;
+        }
+}
+},150)
