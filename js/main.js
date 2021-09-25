@@ -3,18 +3,6 @@
 //     $('.loader').hide(0);
 // })
 $(function(){
-    setInterval(function(){
-        $('.text').find("span").toggleClass('dance');
-    },1700)
-
-    $(window).on('load',function(){
-             $('.preload').hide(0);
-         })
-
-
-
-
-
 $('#fullpage').fullpage({
 anchors: ['firstPage', 'secondPage'],
 menu: '#Menu',

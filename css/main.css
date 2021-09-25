@@ -76,103 +76,8 @@ position: fixed;
 width: 100vw;
 cursor:url(../images/normal.cur),auto;
 }
-/*loading*/
-.preload{
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    left: 0px;
-    top:0px;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-}
-.text{
-    margin-bottom: 10px;
-    color:rgb(0, 207, 243);
-    text-shadow: 0 0 3px rgb(0, 207, 243);
-    font-size: 20px;
-}
-.text span{
-    display: inline-block;
-    
-}
-.dance{
-    animation: dance .8s linear ;
-}
-.text span:nth-child(1){
-   animation-delay: 0s;
-}
-.text span:nth-child(2){
-   animation-delay: .1s;
-}
-.text span:nth-child(3){
-   animation-delay: .2s;
-}
-.text span:nth-child(4){
-   animation-delay: .3s;
-}
-.text span:nth-child(5){
-   animation-delay: .4s;
-}
-.text span:nth-child(6){
-   animation-delay:.5s;
-}
-.text span:nth-child(7){
-   animation-delay: .6s;
-}
-.text span:nth-child(8){
-   animation-delay: .7s;
-}
-.text span:nth-child(9){
-   animation-delay:.8s;
-}
-.text span:nth-child(10){
-   animation-delay: .9s;
-}
-
-@keyframes dance{
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-20px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-.loading{
-    width: 80%;
-    max-width: 260px;
-    height: 6px;
-    background-color: #e1e4e8;
-    border-radius: 6px;
-}
-.bar{
-    display: flex;
-    height: 100%;
-    background: linear-gradient(90deg,#ffd33d,#ea4aaa 10%, #b34bff 30%,#01feff 51%,#ffb33d 68%,#ea4aaa 85%,#b34bff);
-    background-size: 300% 100%;
-    animation:bar 2s linear infinite;
-}
-@keyframes bar{
-    0%{
-        background-position: 100%;
-    }
-    100%{
-        background-position: 0;
-    }
-}
-
-
-
-
-
 .page1{
-overflow: hidden;
+/* overflow: hidden; */
 position: relative;
 }
  canvas {
@@ -190,7 +95,7 @@ height:100vh;
             width: -webkit-fit-content;
             width: -moz-fit-content;
             width: fit-content;
-            font-family:Cinzel,serif;
+            font-family:Cinzel,'Cinzel', serif;
             color:rgb(240, 248, 255);
             letter-spacing: .5rem;
             font-size: 3rem;
@@ -482,8 +387,8 @@ box-shadow: 0 0 5px #2bd2ff,
     height:100%;
     background-size: cover;
     background-position: center;
-    -webkit-animation: bulingbuling 8s linear infinite;
-            animation: bulingbuling 8s linear infinite; 
+    -webkit-animation: bulingbuling 16s linear infinite;
+            animation: bulingbuling 16s linear infinite; 
 }
 .star1{
 background-image:url(../images/star1.png);
@@ -534,7 +439,7 @@ background-image:url(../images/star3.png);
     }
 .cutdown .excerpt{
     width: 100%;
-    font-family: cursive;
+    font-family: cursive,serif;
     text-shadow: 2px 2px 5px #2bd2ff,
                 -2px -2px 5px #2bd2ff,
                 0px 0px 10px #2bd2ff;
@@ -579,7 +484,7 @@ font-size: 1.5em;
     z-index: 1;
 }
 .wormholes h3{
-    font-family: 'Forum', cursive;
+    font-family: 'Cinzel', serif !important;
    text-align: center;
     color:#fff;
     font-size: 3rem;
@@ -726,6 +631,7 @@ font-size:1.3rem;
         color:#2bd2ff; 
     }
     .platform .icon{
+        bottom:12%;
         width: 80%;
     }
     .platform .icon li:nth-child(1) .iconfont{
@@ -759,7 +665,7 @@ font-size:1.3rem;
                     -2px -2px 2px #2EFE2E;
     }
     .cutdown .excerpt{
-        font-size:4rem;
+        font-size:3rem;
     }
     .cutdown .timedown .box h3{
         font-size: 6rem;
