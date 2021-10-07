@@ -77,7 +77,6 @@ width: 100vw;
 cursor:url(../images/normal.cur),auto;
 }
 .page1{
-/* overflow: hidden; */
 position: relative;
 }
  canvas {
@@ -85,21 +84,19 @@ width: 100%;
 height:100vh;
         }
 .septum{
-            display:flex ;
             position: absolute;
-            justify-content: center;
-            align-items: center;
             top:25%;
             left:50%;
+            display:flex ;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
             transform: translateX(-50%);
-            width: -webkit-fit-content;
-            width: -moz-fit-content;
             width: fit-content;
             font-family:Cinzel,'Cinzel', serif;
             color:rgb(240, 248, 255);
             letter-spacing: .5rem;
             font-size: 3rem;
-            pointer-events: none;
             transition: all .5s;
             pointer-events: none;
             z-index: 1;
@@ -110,9 +107,7 @@ height:100vh;
             top:39%;
             left:50%;
             transform: translateX(-50%);
-            width: -webkit-fit-content;
-            width: -moz-fit-content;
-            width: fit-content;
+            width: 100%;
             text-align: center;
             letter-spacing: .1em;
             font-size:2.5rem;
@@ -176,15 +171,13 @@ height:100vh;
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     border-radius: 30px;
     color: white;
-    z-index: 1;
     font-weight: 400px;
     font-size:1em;
     letter-spacing: .2em;
     text-decoration: none;
     overflow: hidden;
     transition:0.5s;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    z-index: 1;
 }
 
 .door .btn:hover a{
@@ -207,36 +200,32 @@ transform: skewX(45deg) translateX(200%);
 .door .btn::before{
 content: '';
 position: absolute;
+top:0px;
 left:50%;
 transform: translateX(-50%);
-bottom: -.2em;
-width: 2.3em;
-height: .7em;
-border-radius: 10px;
-transition: 0.5s;
-}
-.door .btn:hover::before{
-bottom: 0;
-height: 50%;
-width: 80%;
-border-radius: 30px;
+width: 0px;
+height: 0px;
+border-radius:15px 15px 0 0 ;
+transition:width .5s linear;
 }
 .door .btn::after{
 content: '';
 position: absolute;
+bottom:0px;
 left:50%;
 transform: translateX(-50%);
-top: -.2em;
-width: 2.3em;
-height: .7em;
-border-radius: 10px;
-transition: 0.5s;
+width: 0px;
+height: 0px;
+border-radius:0 0 15px 15px;
+transition: width .5s linear;
 } 
+.door .btn:hover::before{
+    height: 50%;
+    width: 100%;
+    }
 .door .btn:hover::after{
-top: 0;
 height: 50%;
-width: 80%;
-border-radius: 30px;
+width: 100%;
 }
 /* 备用颜色 */
 /* .door .btn::before,
@@ -254,6 +243,46 @@ box-shadow: 0 0 5px #2bd2ff,
 0 0 15px #2bd2ff,
 0 0 30px #2bd2ff,
 0 0 60px #2bd2ff;
+}
+@supports ( backdrop-filter: blur(15px)){
+    .door .btn a{
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
+    .door .btn::before{
+        content: '';
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        top: -.2em;
+        width: 2.3em;
+        height: .7em;
+        border-radius: 10px;
+        transition: 0.5s;
+        }
+        .door .btn:hover::before{
+        top: 1px;
+        height: 50%;
+        width: 80%;
+        border-radius: 30px;
+        }
+        .door .btn::after{
+        content: '';
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        bottom: -.2em;
+        width: 2.3em;
+        height: .7em;
+        border-radius: 10px;
+        transition: 0.5s;
+        } 
+        .door .btn:hover::after{
+        bottom: 1px;
+        height: 50%;
+        width: 80%;
+        border-radius: 30px;
+        }  
 }
 /*平台*/
 .platform{
@@ -476,7 +505,7 @@ font-size: 1.5em;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin-top: -10vh;
+    margin-top: -14vh;
     display: flex;
     flex-direction: column;
     justify-content:start;
@@ -614,16 +643,24 @@ font-size:1.3rem;
         letter-spacing: 0px;
     }
     .door .btn::before{
-        bottom: 0;
-        height: 50%;
-        width: 80%;
-        border-radius: 30px;
-     }
-     .door .btn::after{
         top: 0;
         height: 50%;
-        width: 80%;
-        border-radius: 30px;
+        width: 100%;
+     }
+     .door .btn::after{
+        bottom: 0;
+        height: 50%;
+        width: 100%;
+     }
+     @supports ( backdrop-filter: blur(15px)){
+        .door .btn::before{
+            top: 1px;
+            width: 80%;
+         }
+         .door .btn::after{
+            bottom: 1px;
+            width: 80%;
+         } 
      }
      .subtitle{
          margin:0 2px;
