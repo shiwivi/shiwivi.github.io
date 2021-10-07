@@ -629,8 +629,15 @@ font-size:1.3rem;
 
 @media screen and (max-width: 420px){
     .septum{
+        top:20%;
         font-size: 5rem !important;
         letter-spacing: 0;
+    }
+    .subtitle{
+        top:34%;
+    }
+    .door{
+        top:60%;
     }
     .door .btn{
         position: relative;
@@ -639,7 +646,7 @@ font-size:1.3rem;
         min-height: 2.2rem;
     }
     .door .btn a{
-        font-size: 3em;
+        font-size: 2em;
         letter-spacing: 0px;
     }
     .door .btn::before{
@@ -668,7 +675,7 @@ font-size:1.3rem;
         color:#2bd2ff; 
     }
     .platform .icon{
-        bottom:12%;
+        bottom:17%;
         width: 80%;
     }
     .platform .icon li:nth-child(1) .iconfont{
@@ -711,7 +718,7 @@ font-size:1.3rem;
         font-size: 2.8rem;
         }
         .wormholes h3{
-            font-size: 6.8rem;
+            font-size: 5rem;
         }
         .wormholes .verse{
             width: 100%;
