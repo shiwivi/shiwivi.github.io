@@ -1,7 +1,7 @@
 // 加载页面
-// $(window).on('load',function(){
-//     $('.loader').hide(0);
-// })
+$(window).on('load',function(){
+    $('.loading').hide(0);
+})
 $(function(){
 $('#fullpage').fullpage({
 anchors: ['firstPage', 'secondPage'],
