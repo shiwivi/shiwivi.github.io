@@ -9,16 +9,42 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.font.im/css?family=Cinzel|Sacramento" rel="stylesheet"><!--google字体-->
     <link rel="stylesheet" href="css/animate.css"><!--字体淡入动画-->
-     <link rel="preload" href="js/script.js" as="script"><!--预加载：背景流体 -->
-    <link rel="preload" href="js/main.js" as="script"> <!--预加载：主要的js文件 -->
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_2652945_03zsu1kvwqe4.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_2602916_a97wp7y1suq.css"><!--平台字体图标-->
     <link rel="stylesheet" href="css/jquery.fullPage.css"><!--整体框架:全屏切换-->
     <link rel="stylesheet" href="css/normalize.css"><!--移动端初始化-->
     <link rel="stylesheet" href="css/main.css"><!--网页的css-->
     <link href="https://fonts.font.im/css?family=Forum" rel="stylesheet">
+    <script src="js/jquery.min.js"></script><!--jquery插件-->
+<script>
+    $(function(){
+           setInterval(function(){
+               $('.text').find("span").toggleClass('dance');
+           },1700)
+       })
+     $(window).on('load', function () {  
+           $(".preload").fadeOut("slow");  
+      });
+</script>
 </head>
 <body>
+    <div class="preload">
+        <div class="text">
+            <span class="text1">L</span>
+            <span>o</span>
+            <span>a</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+        </div>
+        <div class="loading">
+            <span class="bar"></span>
+        </div>
+    </div>
 <div class="main" id="fullpage">
         <!-- 第一屏 -->
           <div class="section page1">
@@ -67,7 +93,6 @@
      <canvas>该浏览器不支持显示该内容，推荐使用Chrome61、Firefox56、Safari10以上版本的浏览器</canvas>
         </div>
         <script src="js/script.js"></script>
-        <!-- 第一屏end -->
         <div class="section page2">
             <div class="secondPages">  
          <div class="star star1"></div>
@@ -135,7 +160,7 @@
 
         <!-- 第二屏end -->
 </div>
-<script src="js/jquery.min.js"></script><!--jquery插件-->
+
 <script src="js/jquery.fullPage.min.js"></script><!--全屏切换js-->
 <script src="js/jquery.lettering.js"></script><!--副标题淡入字体动画js依赖项-->
 <script src="js/jquery.textillate.js"></script><!--副标题淡入字体动画js-->

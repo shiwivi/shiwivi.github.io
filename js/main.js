@@ -1,7 +1,4 @@
-// 加载页面
-// $(window).on('load',function(){
-//     $('.loading').hide(0);
-// })
+
 $(function(){
 $('#fullpage').fullpage({
 anchors: ['firstPage', 'secondPage'],
@@ -68,7 +65,7 @@ $('.septum').textillate({in:{delay: 100}});
     })
     
     //打字机
-let txt=["技术&生活&分享&回忆","推荐使用PC端谷歌浏览器访问","兼容性正在优化中","bug一堆，记得和我说","服务器在国外,加载会有亿点点慢"];
+let txt=["技术&生活&分享&回忆","推荐使用PC端谷歌浏览器访问","兼容性正在优化中","bug一堆，记得和我说","服务器在国外,加载会有亿点点慢","感谢帮我做兼容性测试的朋友们"];
 let txtIndex=0;//数组下标
 let wordIndex=0;//每句话下标
 let flag=true;//判断写入/删除
