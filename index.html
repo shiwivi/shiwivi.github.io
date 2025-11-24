@@ -1,1 +1,111 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><title>SHIWIVI</title><meta name="author" content="shiwivi"><meta name="copyright" content="shiwivi"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="stylesheet" href="https://at.alicdn.com/t/c/font_2652945_901a4pgjpit.css"><link rel="icon" type="image/png" href="./src/icon.png"><link rel="stylesheet" href="./src/main.min.css"></head><body><div class="main"><div class="section page1"><div class="webTitle">WELCOME TO SHIWIVI'S WEB</div><div class="subtitle">He said,one day you'll leave this world behind.So live a life you will remember.</div><div class="enter"><div class="door"><a href="#secondPage" class="doorBtn">Drive In</a></div></div><div class="platform"><ul class="icon"><li><a href="https://shiwivi.com/blog/atom.xml" title="订阅本站"><div class="iconfont icon-rss"></div><div class="icon-text">RSS订阅</div></a></li><li><a href="mailto:njsgcn@gmail.com" title="联系我"><div class="iconfont icon-gmail"></div><div class="icon-text">邮箱</div></a></li><li><a href="https://t.me/" title="电报"><div class="iconfont icon-telegram"></div><div class="icon-text">Telegram</div></a></li><li><a href="https://shiwivi.com/blog/message/" title="给我留言"><div class="iconfont icon-pinglun"></div><div class="icon-text">留言</div></a></li></ul></div><canvas id="canvas_fluid">该浏览器不支持Canvas，推荐使用Chrome61、Firefox56、Safari10以上版本的浏览器</canvas></div><div class="section page2"><div class="sky"></div><canvas id="canvas_sky">该浏览器不支持Canvas，推荐使用Chrome61、Firefox56、Safari10以上版本的浏览器</canvas><div class="wormholes"><div class="shiwivi">SHIWIVI'S WEB</div><div class="verse"></div><div class="introduce"><span class="textBox"></span><span class="textCursor">|</span></div><div class="lincense">除特殊注明外，博客均采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>协议进行许可</div><div class="guidepost"><a class="pages" href="/blog/"><div class="iconfont icon-wenzhang"></div><div class="pages-title">博客</div><div class="pages-entitle">Blog</div></a><a class="pages" href="/blog/life/"><div class="iconfont icon-haibian"></div><div class="pages-title">日常</div><div class="pages-entitle">Diary</div></a><a class="pages" href="/blog/record/"><div class="iconfont icon-duanluo"></div><div class="pages-title">一句</div><div class="pages-entitle">Each</div></a><a class="pages" href="/blog/message/"><div class="iconfont icon-icon--"></div><div class="pages-title">留言</div><div class="pages-entitle">Chat</div></a><a class="pages" href="/blog/about/"><div class="iconfont icon-iconset0103"></div><div class="pages-title">关于</div><div class="pages-entitle">About</div></a></div></div><div class="BgBtn"><div class="renderInfo"></div><input type="checkbox" id="BgSwitch" checked> <label for="BgSwitch" class="BgSwitch"></label><div class="versions">V4.2.6</div></div></div></div><script src="./src/script.min.js"></script><script src="./src/main.min.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>SHIWIVI</title>
+    <meta name="description" content="手在键盘敲很轻，我给的思念很小心">
+    <meta name="keywords" content="SHIWIVI,博客,笔记">
+    <meta name="author" content="shiwivi">
+    <meta name="copyright" content="shiwivi">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="canonical" href="https://shiwivi.com">
+    <link rel="alternate" type="application/rss+xml" title="SHIWIVI博客RSS" href="https://shiwivi.com/blog/atom.xml">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_2652945_901a4pgjpit.css">
+    <link rel="icon" type="image/png" href="./src/icon.png">
+    <link rel="stylesheet" href="./src/main.min.css">
+    <!-- 大幅修改页面不规范的变量名
+     修复DOM和canvas动画不同步问题 
+     修改DOM星空异常闪烁
+     SEO优化
+    -->
+</head>
+<body>
+    <div class="site-container">
+        <section class="hero-page">
+            <div class="hero-title">shiwivi//</div>
+            <div class="hero-subtitle">He said,one day you'll leave this world behind.So live a life you will remember.</div>
+            <div class="entry-wrapper">
+                <div class="door">
+                    <a href="#secondPage" class="doorbell">Drive In</a>
+                </div>
+            </div>
+            <div class="social-platform">
+                <ul class="social-links">
+                    <li><a href="https://shiwivi.com/blog/atom.xml" title="订阅本站">
+                            <div class="iconfont icon-rss"></div>
+                            <div class="icon-text">RSS订阅</div>
+                    </a></li>
+                    <li><a href="mailto:njsgcn@gmail.com" title="联系我">
+                        <div class="iconfont icon-gmail"></div>
+                        <div class="icon-text">邮箱</div>
+                    </a></li>
+                    <li><a href="https://t.me/" title="电报">
+                        <div class="iconfont  icon-telegram"></div>
+                        <div class="icon-text">Telegram</div>
+                    </a></li>
+                    <li><a href="https://shiwivi.com/blog/message/" title="给我留言">
+                                <div class="iconfont icon-pinglun"></div>
+                                <div class="icon-text">留言</div>
+                    </a></li>
+                </ul>
+            </div>
+            <canvas id="canvas-fluid">该浏览器不支持Canvas，推荐使用Chrome61、Firefox56、Safari10以上版本的浏览器</canvas>
+        </section>
+        <section class="nav-page">
+            <div class="dom-sky"></div>
+            <canvas id="canvas-sky">该浏览器不支持Canvas，推荐使用Chrome61、Firefox56、Safari10以上版本的浏览器</canvas>
+                <div class="wormholes">
+                    <div class="nav-title-container">
+                        <span class="nav-title">menu</span>
+                    </div>
+                    <div class="verse">
+                    </div>
+                    <div class="intro-container"><span class="type-text"></span><span class="type-cursor">|</span></div>
+                    <div class="license">除特殊注明外，博客均采用<a rel="license"
+                            href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>协议进行许可</div>
+                    <div class="nav-list">
+                        <a class="pages" href="/blog/">
+                            <div class="iconfont icon-wenzhang"></div>
+                            <div class="pages-title">博客</div>
+                            <div class="pages-entitle">Blog</div>
+                        </a>
+                        <a class="pages" href="/blog/life/">
+                            <div class="iconfont icon-haibian"></div>
+                            <div class="pages-title">日常</div>
+                            <div class="pages-entitle">Diary</div>
+                        </a>
+                        <a class="pages" href="/blog/record/">
+                            <div class="iconfont icon-duanluo"></div>
+                            <div class="pages-title">一句</div>
+                            <div class="pages-entitle">Each</div>
+                        </a>
+                        <a class="pages" href="/blog/message/">
+                            <div class="iconfont icon-icon--"></div>
+                            <div class="pages-title">留言</div>
+                            <div class="pages-entitle">Chat</div>
+                        </a>
+                        <a class="pages" href="/blog/about/">
+                            <div class="iconfont icon-iconset0103"></div>
+                            <div class="pages-title">关于</div>
+                            <div class="pages-entitle">About</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="background-control">
+                    <div class="render-mode"></div>
+                    <input type="checkbox" id="bg-toggle" checked>
+                    <label for="bg-toggle" class="toggle-btn"></label>
+                    <div class="version-info">
+                        V4.2.7 Beta
+                    </div>
+                </div>
+        </section>
+    </div>
+     <script src="./src/script.min.js"></script>
+    <script src="./src/main.min.js"></script>
+   
+</body>
+</html>
